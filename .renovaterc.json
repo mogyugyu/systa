@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["main"],
+  "extends": [
+    "config:best-practices",
+    "config:js-app",
+    ":automergeAll",
+    ":automergePr",
+    ":disablePrControls",
+    ":labels(dependencies)",
+    ":maintainLockFilesWeekly",
+    ":pathSemanticCommitType(.github/workflows/**, ci)",
+    ":prHourlyLimitNone",
+    ":rebaseStalePrs",
+    ":semanticCommits"
+  ],
+  "automergeStrategy": "squash",
+  "assignAutomerge": true,
+  "assigneesFromCodeOwners": true,
+  "dependencyDashboardAutoclose": true,
+  "prConcurrentLimit": 3,
+  "reviewersFromCodeOwners": true,
+  "packageRules": [
+    {
+      "matchDepTypes": ["dependencies", "require"],
+      "semanticCommitType": "deps",
+      "semanticCommitScope": null
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "semanticCommitType": "deps",
+      "semanticCommitScope": null
+    }
+  ]
+}

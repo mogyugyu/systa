@@ -1,6 +1,9 @@
 [package]
 name = "systa-schema"
-version = "0.1.0"
 edition = "2021"
+version.workspace = true
+description.workspace = true
+license.workspace = true
+repository.workspace = true
 
 [dependencies]

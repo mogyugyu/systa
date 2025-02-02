@@ -16,9 +16,9 @@ systa-server = { path = "crates/systa-server", version = "0.0.0" }
 systa-client = { path = "crates/systa-client", version = "0.0.0" }
 
 # json
-serde = "1.0.217"
-serde_json = "1.0.138"
+serde = "=1.0.217"
+serde_json = "=1.0.138"
 
 # error handling
-anyhow = "1.0.95"
-thiserror = "2.0.11"
+anyhow = "=1.0.95"
+thiserror = "=2.0.11"
